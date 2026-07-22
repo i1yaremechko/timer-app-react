@@ -1,0 +1,74 @@
+@use "@common/scss/variables" as *;
+@use "@common/scss/breakpoints" as *;
+
+.header {
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 16px;
+  display: flex;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include respond-to(desktop) {
+    width: 1440px;
+    padding: 0 135px;
+  }
+}
+
+.header__logo {
+  cursor: pointer;
+  color: $color-white;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-hover-light;
+  }
+}
+
+.header__navigation {
+  align-items: center;
+  gap: 31px;
+  display: flex;
+}
+
+.header__links {
+  gap: 31.3px;
+  margin-left: auto;
+  list-style: none;
+  display: none;
+
+  @include respond-to(tablet) {
+    display: flex;
+  }
+
+  @include respond-to(desktop) {
+    display: flex;
+  }
+}
+
+.header__link {
+  color: $color-white;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header__action-button,
+.header button {
+  text-transform: uppercase;
+  min-width: 132px;
+  height: 40px;
+  font-size: 14px;
+}

@@ -1,0 +1,82 @@
+@use "@common/scss/variables" as *;
+@use "@common/scss/breakpoints" as *;
+
+.footer {
+  background-color: $color-white;
+  border-top: 1px solid #e7e8ea;
+  width: 100%;
+  min-height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__content {
+  width: 100%;
+  max-width: 1440px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  display: flex;
+
+  @include respond-to(desktop) {
+    padding: 0 135px;
+  }
+}
+
+.footer__logo {
+  color: #282b31;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.footer__terms {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 186px;
+  margin-left: 8px;
+  display: none;
+
+  @include respond-to(tablet) {
+    display: flex;
+  }
+
+  @include respond-to(desktop) {
+    display: flex;
+  }
+
+  span {
+    color: #999ea8;
+    font-size: 11px;
+
+    img {
+      margin-bottom: -2px;
+    }
+
+    b {
+      margin-left: 2px;
+    }
+  }
+}
+
+.footer__social-icons {
+  border: 1px solid #e7e8ea;
+  border-radius: 6px;
+  list-style: none;
+  display: flex;
+  overflow: hidden;
+
+  li:last-child a {
+    border-right: none;
+  }
+
+  a {
+    border-right: 1px solid #e7e8ea;
+    justify-content: center;
+    align-items: center;
+    width: 38.7px;
+    height: 38px;
+    display: flex;
+  }
+}
