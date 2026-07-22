@@ -4,6 +4,11 @@ A modern SPA application for creating and managing timers, built with **React**,
 
 ---
 
+## 🔗 Live Demo
+[View the Live Project](https://i1yaremechko.github.io/timer-app-react/)
+
+---
+
 ## 🚀 Features
 
 * ➕ **Create Timers**: Quickly add custom timers with any title.
