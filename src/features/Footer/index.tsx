@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
         <div className="footer__terms">
           <span>
             Created with{" "}
-            <img alt="love" src={love} />
+            <img alt="love" src={love} /> by{" "}
             <b>Sergey Azovskiy</b>
           </span>
           <span>© Timers App, 2025</span>
