@@ -3,4 +3,5 @@ export interface ITimer {
   title: string
   seconds: number
   isRunning: boolean
+  lastStartedAt: number | null
 }

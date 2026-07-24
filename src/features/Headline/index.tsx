@@ -3,7 +3,11 @@ import "./index.scss";
 
 export const Headline: React.FC = () => {
   return (
-    <section className="headline">
+    <section
+      className="headline"
+      style={{
+        background: `url("images/headline/background.png")`
+      }}>
       <div className="headline__content content">
         <div className="headline__description">
           <img

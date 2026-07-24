@@ -20,7 +20,8 @@
     "paths": {
       "@common/*": ["./src/common/*"],
       "@features/*": ["./src/features/*"],
-      "@layouts/*": ["./src/layouts/*"]
+      "@layouts/*": ["./src/layouts/*"],
+      "@images/*": ["./public/images/*"]
     },
 
     /* Linting */

@@ -2,7 +2,9 @@
 @use "@common/scss/breakpoints" as *;
 
 .headline {
-  background: url("@images/headline/background.png") 0 0/cover no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
   justify-content: center;
   display: flex;
   position: relative;

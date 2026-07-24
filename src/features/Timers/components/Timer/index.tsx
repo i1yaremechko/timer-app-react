@@ -2,6 +2,7 @@ import type { ITimer } from "@common/types/timer";
 import { formatTime } from "@common/utils/formatTime";
 import React from "react";
 import "./index.scss";
+import { getElapsedSeconds } from "@features/Timers/utils/timerUtils";
 
 interface TimerProps {
   timer: ITimer;
@@ -25,7 +26,7 @@ export const Timer: React.FC<TimerProps> = ({
         className={`timer__value ${!timer.isRunning ? 'timer__value_paused' : ''
           }`}
       >
-        {formatTime(timer.seconds)}
+        {formatTime(getElapsedSeconds(timer))}
       </div>
 
       <button
