@@ -29,7 +29,7 @@ export const useTimers = () => {
       isRunning: true
     }
 
-    setTimers(prev => [...prev, newTimer])
+    setTimers(prev => [newTimer, ...prev])
   }
 
   const toggleTimer = (id: string) => {
