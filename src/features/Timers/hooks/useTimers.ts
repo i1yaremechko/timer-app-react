@@ -1,25 +1,12 @@
 import type {ITimer} from "@common/types/timer"
 import {useEffect, useState} from "react"
-
-const STORAGE_KEY = "app_timers"
+import {getSavedTimers, saveTimers} from "../utils/storage"
 
 export const useTimers = () => {
-  const [timers, setTimers] = useState<ITimer[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY)
-    if (saved) {
-      try {
-        return JSON.parse(saved)
-      } catch {
-        return []
-      }
-    }
-    return []
-  })
-
-  const [titleInput, setTitleInput] = useState("")
+  const [timers, setTimers] = useState<ITimer[]>(getSavedTimers)
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(timers))
+    saveTimers(timers)
   }, [timers])
 
   useEffect(() => {
@@ -34,19 +21,15 @@ export const useTimers = () => {
     return () => clearInterval(interval)
   }, [])
 
-  const addTimer = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!titleInput.trim()) return
-
+  const addTimer = (title: string) => {
     const newTimer: ITimer = {
       id: crypto.randomUUID(),
-      title: titleInput.trim(),
+      title,
       seconds: 0,
       isRunning: true
     }
 
     setTimers(prev => [...prev, newTimer])
-    setTitleInput("")
   }
 
   const toggleTimer = (id: string) => {
@@ -63,8 +46,6 @@ export const useTimers = () => {
 
   return {
     timers,
-    titleInput,
-    setTitleInput,
     addTimer,
     toggleTimer,
     deleteTimer

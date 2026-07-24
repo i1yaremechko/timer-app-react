@@ -18,57 +18,57 @@
     width: 1440px;
     padding: 0 135px;
   }
-}
 
-.header__logo {
-  cursor: pointer;
-  color: $color-white;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 20px;
-  transition: color 0.3s ease;
+  &__logo {
+    cursor: pointer;
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 20px;
+    transition: color 0.3s ease;
 
-  &:hover {
-    color: $color-hover-light;
+    &:hover {
+      color: $color-hover-light;
+    }
   }
-}
 
-.header__navigation {
-  align-items: center;
-  gap: 31px;
-  display: flex;
-}
-
-.header__links {
-  gap: 31.3px;
-  margin-left: auto;
-  list-style: none;
-  display: none;
-
-  @include respond-to(tablet) {
+  &__navigation {
+    align-items: center;
+    gap: 31px;
     display: flex;
   }
 
-  @include respond-to(desktop) {
-    display: flex;
+  &__links {
+    gap: 31.3px;
+    margin-left: auto;
+    list-style: none;
+    display: none;
+
+    @include respond-to(tablet) {
+      display: flex;
+    }
+
+    @include respond-to(desktop) {
+      display: flex;
+    }
   }
-}
 
-.header__link {
-  color: $color-white;
-  font-size: 15px;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
+  &__link {
+    color: $color-white;
+    font-size: 15px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
 
-  &:hover {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
-}
 
-.header__action-button,
-.header button {
-  text-transform: uppercase;
-  min-width: 132px;
-  height: 40px;
-  font-size: 14px;
+  &__action-button,
+  button {
+    text-transform: uppercase;
+    min-width: 132px;
+    height: 40px;
+    font-size: 14px;
+  }
 }

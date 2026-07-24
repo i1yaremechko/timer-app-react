@@ -1,17 +1,11 @@
 import React from "react";
+import { Timer } from "./components/Timer";
 import { useTimers } from "./hooks/useTimers";
 import "./index.scss";
-import { Timer } from "./components/Timer";
+import { CreateForm } from "./components/CreateForm";
 
 export const Timers: React.FC = () => {
-  const {
-    timers,
-    titleInput,
-    setTitleInput,
-    addTimer,
-    toggleTimer,
-    deleteTimer,
-  } = useTimers();
+  const { timers, addTimer, toggleTimer, deleteTimer } = useTimers();
 
   return (
     <section className="timers">
@@ -25,17 +19,7 @@ export const Timers: React.FC = () => {
       </p>
 
       <div className="timers__content">
-        <form className="timers__form" onSubmit={addTimer}>
-          <input
-            placeholder="Timer Name"
-            type="text"
-            value={titleInput}
-            onChange={(e) => setTitleInput(e.target.value)}
-          />
-          <button className="timers__submit-button button" type="submit">
-            Create Timer
-          </button>
-        </form>
+        <CreateForm onAddTimer={addTimer} />
 
         <span className="timers__line"></span>
 

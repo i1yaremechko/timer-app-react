@@ -7,67 +7,77 @@
   display: flex;
   position: relative;
   height: 720px;
-}
 
-.headline__content {
-  padding: 140px 16px 100px;
-  position: relative;
-  width: 1440px;
-  margin: 0 auto;
+  &__content {
+    padding: 140px 16px 100px;
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
 
-  @include respond-to(tablet) {
-    justify-content: center;
+    @include respond-to(tablet) {
+      justify-content: center;
+      display: flex;
+    }
+
+    @include respond-to(desktop) {
+      padding: 230px 135px 180px;
+      display: block;
+    }
+  }
+
+  &__description {
+    max-width: 555px;
+
+    @include respond-to(tablet) {
+      text-align: center;
+    }
+
+    @include respond-to(desktop) {
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+
+  &__title {
+    letter-spacing: 1px;
+    color: $color-white;
+    margin: 10px 0 36px;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 50px;
+
+    b {
+      font-weight: 800;
+    }
+  }
+
+  &__buttons {
+    gap: 20px;
     display: flex;
+
+    @include respond-to(tablet) {
+      justify-content: center;
+    }
+
+    @include respond-to(desktop) {
+      justify-content: left;
+    }
   }
 
-  @include respond-to(desktop) {
-    padding: 230px 135px 180px;
-    display: block;
-  }
-}
+  &__decoration {
+    display: none;
 
-.headline__description {
-  max-width: 555px;
-
-  @include respond-to(tablet) {
-    text-align: center;
-  }
-
-  @include respond-to(desktop) {
-    text-align: left;
-    margin: 0;
-  }
-}
-
-
-.headline__logo {
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-
-.headline__title {
-  letter-spacing: 1px;
-  color: $color-white;
-  margin: 10px 0 36px;
-  font-size: 35px;
-  font-weight: 300;
-  line-height: 50px;
-
-  b {
-    font-weight: 800;
-  }
-}
-
-.headline__buttons {
-  gap: 20px;
-  display: flex;
-
-  @include respond-to(tablet) {
-    justify-content: center;
-  }
-
-  @include respond-to(desktop) {
-    justify-content: left;
+    @include respond-to(desktop) {
+      display: inline;
+      position: absolute;
+      top: 137px;
+      right: 179px;
+    }
   }
 }
 
@@ -83,21 +93,10 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 17px;
-}
 
-.button_white {
-  color: #282b31;
-  background: #f8f9fa;
-  min-width: 144px;
-}
-
-.headline__decoration {
-  display: none;
-
-  @include respond-to(desktop) {
-    display: inline;
-    position: absolute;
-    top: 137px;
-    right: 179px;
+  &_white {
+    color: #282b31;
+    background: #f8f9fa;
+    min-width: 144px;
   }
 }

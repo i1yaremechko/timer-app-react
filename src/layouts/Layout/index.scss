@@ -19,7 +19,6 @@
   position: relative;
 }
 
-/* Анімована смужка завантаження */
 .linear-progress {
   position: fixed;
   top: 0;
@@ -29,14 +28,14 @@
   background-color: #cce3f5;
   overflow: hidden;
   z-index: 1000;
-}
 
-.linear-progress__bar {
-  width: 100%;
-  height: 100%;
-  background-color: #3a80ba;
-  animation: linearLoading 1.5s infinite ease-in-out;
-  transform-origin: left center;
+  &__bar {
+    width: 100%;
+    height: 100%;
+    background-color: #3a80ba;
+    animation: linearLoading 1.5s infinite ease-in-out;
+    transform-origin: left center;
+  }
 }
 
 @keyframes linearLoading {

@@ -16,105 +16,66 @@
   @include respond-to(desktop) {
     padding: 250px 0 113px;
   }
-}
 
-.timers__title {
-  text-align: center;
-  letter-spacing: 1px;
-  color: #282b31;
-  min-width: 100%;
-  font-size: 35px;
-  font-weight: 300;
-
-  @include respond-to(desktop) {
-    min-width: 570px;
-  }
-
-  b {
-    margin-right: 1px;
-    font-weight: 800;
-  }
-}
-
-.timers__description {
-  text-align: center;
-  color: #676c75;
-  max-width: 570px;
-  font-size: 16px;
-  line-height: 30px;
-}
-
-.timers__content {
-  background-color: $color-white;
-  border-radius: 12px;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
-  margin-top: 42px;
-  padding: 40px 0 39px;
-  display: flex;
-
-  @include respond-to(tablet) {
-    width: 770px;
-  }
-
-  @include respond-to(desktop) {
-    width: 770px;
-  }
-}
-
-.timers__form {
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  padding: 0 16px;
-  display: flex;
-
-  @include respond-to(tablet) {
-    flex-direction: row;
-    width: auto;
-    padding: 0;
-  }
-
-  @include respond-to(desktop) {
-    flex-direction: row;
-    width: auto;
-    padding: 0;
-  }
-
-  input {
-    background-color: #f8f9fa;
-    border: 1px solid #e7e8ea;
-    border-radius: 6px;
-    width: 100%;
-    height: 50px;
-    padding: 2px 20px 0;
-    font-size: 17px;
+  &__title {
+    text-align: center;
+    letter-spacing: 1px;
+    color: #282b31;
+    min-width: 100%;
+    font-size: 35px;
+    font-weight: 300;
 
     @include respond-to(desktop) {
-      width: 305px;
+      min-width: 570px;
     }
 
-    &::placeholder {
-      color: #676c75b2;
-      font-size: 17px;
+    b {
+      margin-right: 1px;
+      font-weight: 800;
     }
   }
-}
 
-.timers__submit-button {
-  min-width: 165px !important;
-}
+  &__description {
+    text-align: center;
+    color: #676c75;
+    max-width: 570px;
+    font-size: 16px;
+    line-height: 30px;
+  }
 
-.timers__line {
-  background-color: #e7e8ea;
-  width: 100%;
-  height: 1px;
-}
+  &__content {
+    background-color: $color-white;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-top: 42px;
+    padding: 40px 0 39px;
+    display: flex;
 
-.timers__list {
-  flex-direction: column;
-  gap: 40px;
-  display: flex;
+    @include respond-to(tablet) {
+      width: 770px;
+    }
+
+    @include respond-to(desktop) {
+      width: 770px;
+    }
+  }
+
+  &__submit-button {
+    min-width: 165px !important;
+  }
+
+  &__line {
+    background-color: #e7e8ea;
+    width: 100%;
+    height: 1px;
+  }
+
+  &__list {
+    flex-direction: column;
+    gap: 40px;
+    display: flex;
+  }
 }
