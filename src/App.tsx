@@ -1,8 +1,8 @@
-import { Footer } from "@/features/Footer";
-import { Header } from "@/features/Header";
-import { Headline } from "@/features/Headline";
-import { TimersSection } from "@/features/TimersSection";
-import { Layout } from "@/layouts/Layout";
+import { Footer } from "@features/Footer";
+import { Header } from "@features/Header";
+import { Headline } from "@features/Headline";
+import { Timers } from "@features/Timers";
+import { Layout } from "@layouts/Layout";
 
 export function App() {
   return (
@@ -10,7 +10,7 @@ export function App() {
       <Header />
       <main>
         <Headline />
-        <TimersSection />
+        <Timers />
       </main>
       <Footer />
     </Layout>

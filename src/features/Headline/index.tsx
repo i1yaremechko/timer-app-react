@@ -1,5 +1,3 @@
-import decoration from '@/assets/images/headline/decoration.png';
-import logo from '@/assets/images/headline/logo.svg';
 import React from "react";
 import "./index.scss";
 
@@ -11,7 +9,7 @@ export const Headline: React.FC = () => {
           <img
             className="headline__logo"
             alt="logo"
-            src={logo}
+            src="images/headline/logo.svg"
           />
           <h2 className="headline__title">
             <b>Timers App.</b> Best landing page for web and mobile apps
@@ -24,7 +22,7 @@ export const Headline: React.FC = () => {
         <img
           className="headline__decoration"
           alt="decoration"
-          src={decoration}
+          src="images/headline/decoration.png"
         />
       </div>
     </section>

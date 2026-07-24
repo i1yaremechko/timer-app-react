@@ -1,4 +1,4 @@
-import type {ITimer} from "@/common/types/timer"
+import type {ITimer} from "@common/types/timer"
 import {useEffect, useState} from "react"
 
 const STORAGE_KEY = "app_timers"

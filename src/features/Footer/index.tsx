@@ -1,7 +1,3 @@
-import facebook from '@/assets/images/footer/facebook.svg';
-import love from '@/assets/images/footer/heart.svg';
-import instagram from '@/assets/images/footer/instagram.svg';
-import twitter from '@/assets/images/footer/twitter.svg';
 import React from "react";
 import "./index.scss";
 
@@ -14,7 +10,7 @@ export const Footer: React.FC = () => {
         <div className="footer__terms">
           <span>
             Created with{" "}
-            <img alt="love" src={love} /> by{" "}
+            <img alt="love" src="images/footer/heart.svg" /> by{" "}
             <b>Sergey Azovskiy</b>
           </span>
           <span>© Timers App, 2025</span>
@@ -23,17 +19,17 @@ export const Footer: React.FC = () => {
         <ul className="footer__social-icons">
           <li>
             <a href="#">
-              <img alt="twitter" src={twitter} />
+              <img alt="twitter" src="images/footer/twitter.svg" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img alt="facebook" src={facebook} />
+              <img alt="facebook" src="images/footer/facebook.svg" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img alt="instagram" src={instagram} />
+              <img alt="instagram" src="images/footer/instagram.svg" />
             </a>
           </li>
         </ul>

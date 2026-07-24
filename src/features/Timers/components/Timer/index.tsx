@@ -1,18 +1,15 @@
-import deleteTimer from "@/assets/images/timers/delete.png";
-import pause from "@/assets/images/timers/pause.png";
-import run from "@/assets/images/timers/run.png";
-import type { ITimer } from "@/common/types/timer";
-import { formatTime } from "@/common/utils/formatTime";
+import type { ITimer } from "@common/types/timer";
+import { formatTime } from "@common/utils/formatTime";
 import React from "react";
 import "./index.scss";
 
-interface TimerItemProps {
+interface TimerProps {
   timer: ITimer;
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
 }
 
-export const TimerItem: React.FC<TimerItemProps> = ({
+export const Timer: React.FC<TimerProps> = ({
   timer,
   onToggle,
   onDelete,
@@ -41,12 +38,12 @@ export const TimerItem: React.FC<TimerItemProps> = ({
         {timer.isRunning ? (
           <img
             alt="pause"
-            src={pause}
+            src="images/timers/pause.png"
           />
         ) : (
           <img
             alt="run"
-            src={run}
+            src="images/timers/run.png"
           />
         )}
       </button>
@@ -59,7 +56,7 @@ export const TimerItem: React.FC<TimerItemProps> = ({
       >
         <img
           alt="delete"
-          src={deleteTimer}
+          src="images/timers/delete.png"
         />
       </button>
     </li>

@@ -1,9 +1,9 @@
 import React from "react";
-import { TimerItem } from "./TimerItem";
 import { useTimers } from "./hooks/useTimers";
 import "./index.scss";
+import { Timer } from "./components/Timer";
 
-export const TimersSection: React.FC = () => {
+export const Timers: React.FC = () => {
   const {
     timers,
     titleInput,
@@ -41,7 +41,7 @@ export const TimersSection: React.FC = () => {
 
         <ul className="timers__list">
           {timers.map((timer) => (
-            <TimerItem
+            <Timer
               key={timer.id}
               timer={timer}
               onToggle={toggleTimer}
