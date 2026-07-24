@@ -7,10 +7,10 @@ export default defineConfig({
   base: "/timer-app-react/",
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
       "@common": path.resolve(__dirname, "./src/common"),
       "@features": path.resolve(__dirname, "./src/features"),
-      "@layouts": path.resolve(__dirname, "./src/layouts")
+      "@layouts": path.resolve(__dirname, "./src/layouts"),
+      "@images": path.resolve(__dirname, "./public/images")
     }
   }
 })
