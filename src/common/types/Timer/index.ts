@@ -1,4 +1,4 @@
-export interface ITimer {
+export interface Timer {
   id: string
   title: string
   seconds: number

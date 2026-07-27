@@ -1,8 +1,8 @@
 import React from "react";
 import { Timer } from "./components/Timer";
+import { CreateForm } from "./components/CreateForm";
 import { useTimers } from "./hooks/useTimers";
 import "./index.scss";
-import { CreateForm } from "./components/CreateForm";
 
 export const Timers: React.FC = () => {
   const { timers, addTimer, toggleTimer, deleteTimer } = useTimers();

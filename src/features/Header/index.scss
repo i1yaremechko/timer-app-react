@@ -2,16 +2,16 @@
 @use "@common/scss/breakpoints" as *;
 
 .header {
+  position: absolute;
+  top: 25px;
+  left: 50%;
   z-index: 10;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   min-height: 40px;
   padding: 0 16px;
-  display: flex;
-  position: absolute;
-  top: 25px;
-  left: 50%;
   transform: translateX(-50%);
 
   @include respond-to(desktop) {
@@ -20,11 +20,11 @@
   }
 
   &__logo {
-    cursor: pointer;
-    color: $color-white;
     font-size: 20px;
     font-weight: 800;
     line-height: 20px;
+    color: $color-white;
+    cursor: pointer;
     transition: color 0.3s ease;
 
     &:hover {
@@ -33,16 +33,16 @@
   }
 
   &__navigation {
+    display: flex;
     align-items: center;
     gap: 31px;
-    display: flex;
   }
 
   &__links {
+    display: none;
     gap: 31.3px;
     margin-left: auto;
     list-style: none;
-    display: none;
 
     @include respond-to(tablet) {
       display: flex;
@@ -54,9 +54,9 @@
   }
 
   &__link {
-    color: $color-white;
     font-size: 15px;
     text-decoration: none;
+    color: $color-white;
     transition: opacity 0.2s ease;
 
     &:hover {
@@ -66,9 +66,9 @@
 
   &__action-button,
   button {
-    text-transform: uppercase;
     min-width: 132px;
     height: 40px;
     font-size: 14px;
+    text-transform: uppercase;
   }
 }

@@ -2,11 +2,11 @@
 @use "@common/scss/breakpoints" as *;
 
 .timer {
+  position: relative;
+  display: flex;
   align-items: center;
   gap: 4px;
   width: 100%;
-  display: flex;
-  position: relative;
 
   @include respond-to(tablet) {
     gap: 20px;
@@ -19,12 +19,12 @@
   }
 
   button {
-    border: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
-    display: flex;
+    border: none;
     cursor: pointer;
     transition: transform 0.2s ease;
 
@@ -34,15 +34,15 @@
   }
 
   &__title {
+    position: relative;
+    width: 130px;
+    overflow-x: hidden;
+    font-size: 20px;
+    font-weight: 800;
     color: #5586f2;
     text-wrap: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
-    width: 130px;
-    font-size: 20px;
-    font-weight: 800;
-    overflow-x: hidden;
-    position: relative;
 
     &:hover .timer__tooltip {
       display: block;
@@ -50,32 +50,32 @@
   }
 
   &__tooltip {
-    color: #fff;
-    background-color: #383a3fa1;
-    border-radius: 5px;
-    padding: 2px 8px;
-    font-size: 13px;
-    font-weight: 500;
-    display: none;
     position: absolute;
     top: -24px;
     left: 0;
-    white-space: nowrap;
     z-index: 10;
+    display: none;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    background-color: #383a3fa1;
   }
 
   &__value {
-    background-color: #E7E8EA;
-    color: #676c75;
-    border-radius: 6px;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 117px;
     height: 50px;
     margin: 0 4px;
+    border-radius: 6px;
     font-size: 17px;
-    display: flex;
     font-weight: 400;
+    color: #676c75;
+    background-color: #E7E8EA;
 
     &_paused {
       background-color: rgba(255, 72, 118, 0.15);
@@ -87,17 +87,17 @@
   }
 
   &__toggle-button {
-    background: linear-gradient(135deg, #7956ec 0%, #2fb9f8 100%);
     border-radius: 50%;
+    background: linear-gradient(135deg, #7956ec 0%, #2fb9f8 100%);
 
     &_paused {
-      background: linear-gradient(135deg, #009fc5 0%, #3cecb0 100%);
       padding-left: 4px;
+      background: linear-gradient(135deg, #009fc5 0%, #3cecb0 100%);
     }
   }
 
   &__delete-button {
-    background: linear-gradient(135deg, #f23673 0%, #fca069 100%);
     border-radius: 6px;
+    background: linear-gradient(135deg, #f23673 0%, #fca069 100%);
   }
 }

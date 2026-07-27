@@ -1,17 +1,10 @@
 import React, { useState } from "react";
+import { getDefaultTimerTitle } from "./utils";
 import "./index.scss";
 
 interface CreateFormProps {
   onAddTimer: (title: string) => void;
 }
-
-const getDefaultTimerTitle = (): string => {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, "0");
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-
-  return `From ${hours}:${minutes}`;
-};
 
 export const CreateForm: React.FC<CreateFormProps> = ({ onAddTimer }) => {
   const [titleInput, setTitleInput] = useState("");

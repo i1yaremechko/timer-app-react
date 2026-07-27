@@ -2,11 +2,11 @@
 
 .timers {
   &__form {
+    display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
     padding: 0 16px;
-    display: flex;
 
     @include respond-to(tablet) {
       flex-direction: row;
@@ -21,21 +21,21 @@
     }
 
     input {
-      background-color: #f8f9fa;
-      border: 1px solid #e7e8ea;
-      border-radius: 6px;
       width: 100%;
       height: 50px;
       padding: 2px 20px 0;
+      border: 1px solid #e7e8ea;
+      border-radius: 6px;
       font-size: 17px;
+      background-color: #f8f9fa;
 
       @include respond-to(desktop) {
         width: 305px;
       }
 
       &::placeholder {
-        color: #676c75b2;
         font-size: 17px;
+        color: #676c75b2;
       }
     }
   }

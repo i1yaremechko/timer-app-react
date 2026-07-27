@@ -1,10 +1,10 @@
-import type {ITimer} from "@common/types/timer"
 import {useEffect, useState} from "react"
-import {getSavedTimers, saveTimers} from "../utils/storage"
-import {getElapsedSeconds} from "../utils/timerUtils"
+import {getSavedTimers, saveTimers} from "@features/Timers/gateways"
+import {getElapsedSeconds} from "@features/Timers/utils"
+import type {Timer as TimerType} from "@common/types/Timer"
 
 export const useTimers = () => {
-  const [timers, setTimers] = useState<ITimer[]>(getSavedTimers)
+  const [timers, setTimers] = useState<TimerType[]>(getSavedTimers)
 
   useEffect(() => {
     saveTimers(timers)
@@ -20,7 +20,7 @@ export const useTimers = () => {
 
   const addTimer = (title: string) => {
     const now = Date.now()
-    const newTimer: ITimer = {
+    const newTimer: TimerType = {
       id: crypto.randomUUID(),
       title,
       seconds: 0,

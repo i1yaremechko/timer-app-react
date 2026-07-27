@@ -1,6 +1,6 @@
-import type {ITimer} from "@common/types/timer"
+import type {Timer as TimerType} from "@common/types/Timer"
 
-export const getElapsedSeconds = (timer: ITimer): number => {
+export const getElapsedSeconds = (timer: TimerType): number => {
   if (!timer.isRunning || !timer.lastStartedAt) {
     return timer.seconds
   }

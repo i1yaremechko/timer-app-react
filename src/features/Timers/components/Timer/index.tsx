@@ -1,11 +1,11 @@
-import type { ITimer } from "@common/types/timer";
-import { formatTime } from "@common/utils/formatTime";
 import React from "react";
+import { getElapsedSeconds } from "@features/Timers/utils";
+import type { Timer as TimerType } from "@common/types/Timer";
+import { formatTime } from "./utils";
 import "./index.scss";
-import { getElapsedSeconds } from "@features/Timers/utils/timerUtils";
 
 interface TimerProps {
-  timer: ITimer;
+  timer: TimerType;
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
 }
